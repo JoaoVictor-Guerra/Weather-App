@@ -15,6 +15,10 @@ body{
     color: white;
 }
 
+.img-icon{
+    width: 90px;
+}
+
 .location, .temperature{
     height: 30vh;
     width: 50%;

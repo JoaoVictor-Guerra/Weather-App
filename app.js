@@ -18,6 +18,7 @@ window.addEventListener('load',()=>{
 
         const api = `${proxy}https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}`;
 
+
         fetch(api)
         .then(response => {
         return response.json();
@@ -27,12 +28,15 @@ window.addEventListener('load',()=>{
         console.log(data);
         const {temp} = data.main;
         const {main} = data.weather;
-        const {name} = data.name;
+        const {name} = data;
 
         // DOM Elements from API
 
         temperatureDegree.textContent = temp;
         temperatureDescription.textContent = main;
+        temperaturelocationTimezone.textContent = name;
+
+                const api2 = `${proxy}https://api.openweathermap.org/data/2.5/weather?q={temperaturelocationTimeZone}&appid={API_KEY}`
         })
 
         });
